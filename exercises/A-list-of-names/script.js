@@ -1,5 +1,12 @@
 function listOfNames(arrayOfPeople) {
   let content = document.querySelector("#content");
+
+
+  for (let item of arrayOfPeople) {
+    content.insertAdjacentHTML('afterbegin',
+      `<h1>${item.name}</h1>
+    <h2>${item.job}</h2>`);
+  }
 }
 
 let people = [
@@ -9,3 +16,4 @@ let people = [
 ];
 
 listOfNames(people);
+
